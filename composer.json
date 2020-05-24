@@ -9,7 +9,6 @@
             "name": "Enzo Franco Sparacino"
         }
     ],
-    "minimum-stability": "dev",
     "require": {},
     "autoload": {
         "files": [
