@@ -1,0 +1,43 @@
+<?php $posts = $block->displayMedia(); ?>
+<?php if (count($posts)): ?>
+	<?php if($block->getData('title')): ?>
+		<h2 class='title'><?php echo $block->getData('title'); ?></h2>
+	<?php endif; ?>
+	<?php if($block->getData('subtitle')): ?>
+		<h3 class='subtitle'><?php echo $block->getData('subtitle'); ?></h3>
+	<?php endif; ?>
+	<div class="owl-carousel">
+		<?php foreach ($posts as $key => $post): ?>
+			<div class="owl-item">
+				<a class="item-link" style="padding-bottom: 100%" href="<?php echo $post['permalink'] ?>" target="_blank">
+					<img alt="<?php echo $post['caption'] ?>" class="img-responsive" src="<?php echo $post['thumbnail'] ?>" />
+				</a>
+			</div>
+		<?php endforeach; ?>
+	</div>
+	<script>
+	(function  () {
+		require(["jquery","owlCarousel"],function($) {
+			$(document).ready(function() {
+				$(".owl-carousel").owlCarousel({
+					navigation:false,
+					autoPlay:true,
+					items:5,
+					margin:5,
+					responsive:{
+				        0:{
+				            items:1
+				        },
+				        600:{
+				            items:3
+				        },
+				        1000:{
+				            items:5
+				        }
+				    }
+				});
+			});
+		});
+	})();
+	</script>
+<?php endif; ?>

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="sparacino" sortOrder="999" translate="label">
+			<label>Sparacino</label>
+		</tab>
+		<section id="instagram" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>Instagram</label>
+			<tab>sparacino</tab>
+			<resource>Sparacino_Instagram::config_sparacino_instagram</resource>
+			<group id="options" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Options</label>
+				<field id="active" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+					<label>Enable</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="app_access_token" showInDefault="1" showInStore="0" showInWebsite="0" sortOrder="20" translate="label" type="text">
+					<label>APP_ACCESS_TOKEN</label>
+					<comment>Go to https://developers.facebook.com and generate Instagram Access Token</comment>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>

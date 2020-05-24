@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="Sparacino_Instagram::css/owl.carousel.min.css"/>
+	</head>
+	<body>
+		<referenceBlock name="instagram">
+			<block as="instagram" class="Sparacino\Instagram\Block\Instagram" name="instagram" template="Sparacino_Instagram::instagram.phtml"/>
+		</referenceBlock>
+	</body>
+</page>

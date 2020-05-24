@@ -1,0 +1,40 @@
+<?php
+/**
+ * @var $block \Sparacino\Instagram\Block\Instagram
+ */
+?>
+<?php $posts = $block->displayMedia(); ?>
+<div class="owl-carousel">
+	<?php foreach ($posts as $key => $post): ?>
+		<div class="owl-item">
+			<a class="item-link" style="padding-bottom: 100%" href="<?php echo $post['permalink'] ?>" target="_blank">
+				<img alt="<?php echo $post['caption'] ?>" class="img-responsive" src="<?php echo $post['thumbnail'] ?>" />
+			</a>
+		</div>
+	<?php endforeach; ?>
+</div>
+<script>
+(function  () {
+	require(["jquery","owlCarousel"],function($) {
+		$(document).ready(function() {
+			$(".owl-carousel").owlCarousel({
+				navigation:false,
+				autoPlay:true,
+				items:5,
+				margin:5,
+				responsive:{
+			        0:{
+			            items:1
+			        },
+			        600:{
+			            items:3
+			        },
+			        1000:{
+			            items:5
+			        }
+			    }
+			});
+		});
+	});
+})();
+</script>

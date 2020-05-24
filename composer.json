@@ -1,0 +1,22 @@
+{
+    "name": "sparacino/module-instagram",
+    "description": "A module for the Instagram Basic Display API for Magento2.",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "email": "esparacino@gmail.com",
+            "name": "Enzo Franco Sparacino"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Sparacino\\Instagram\\": ""
+        }
+    }
+}
