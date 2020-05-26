@@ -12,11 +12,13 @@
 ## Main Functionalities
 A module for the Instagram Basic Display API for Magento2.
 
+It is necessary to generate a "long-lived access tokens for Instagram" by connecting to the site https://developers.facebook.com
+
 ## Installation
 
 ### Type 1: Zip file
 
- - Unzip the zip file in `app/code/Sparacino`
+ - Unzip the zip file and copy contents in `app/code/Sparacino/Instagram`
  - Enable the module by running `php bin/magento module:enable Sparacino_Instagram`
  - Apply database updates by running `php bin/magento setup:upgrade`\*
  - Flush the cache by running `php bin/magento cache:flush`
