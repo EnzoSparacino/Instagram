@@ -85,7 +85,7 @@ class Data extends AbstractHelper
              if ($userMedia->data) {
                  $media = [];
                  foreach ($userMedia->data as $key => $value) {
-                     $media[$value->id]['caption'] = ($value->caption) ? $value->caption : '';
+                     $media[$value->id]['caption'] = (isset($value->caption) && $value->caption) ? $value->caption : '';
                      $media[$value->id]['thumbnail'] = ($value->media_type == 'VIDEO') ? $value->thumbnail_url : $value->media_url;
                      $media[$value->id]['permalink'] = $value->permalink;
                  }
